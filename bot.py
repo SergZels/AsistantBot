@@ -13,7 +13,7 @@ from bd.bdnew import rec, showpassw
 from loguru import logger
 from aiogram.utils.executor import start_webhook
 
-Dev_MODE = True
+Dev_MODE = False
 
 ##------------------Блок ініціалізації-----------------##
 API_Token = conf.TOKEN
@@ -21,16 +21,16 @@ API_Token = conf.TOKEN
 ADMIN_ID = conf.ADMIN_ID
 bot = Bot(token=API_Token)#os.getenv('TOKEN'))
 storage = MemoryStorage()
-dp = Dispatcher(bot, storage = storage)
+dp = Dispatcher(bot, storage=storage)
 logger.add("debug.txt")
 # webhook settings
 WEBHOOK_HOST = 'https://vmi957205.contaboserver.net'
-WEBHOOK_PATH = '/prod_orxmstat'
+WEBHOOK_PATH = '/prod_szasistant'
 WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
 
 # webserver settings
 WEBAPP_HOST = '0.0.0.0'  # or ip 127.0.0.1
-WEBAPP_PORT = 3004
+WEBAPP_PORT = 3009
 
 ##--------------Машини станів----------------------------##
 class FSMzapPass(StatesGroup):

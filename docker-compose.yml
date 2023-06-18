@@ -4,8 +4,6 @@ services:
     build: .
     restart: always 
     ports:
-      - "3004:3004"
+      - "3009:3009"
     volumes:
       - .:/usr/src/app
-    environment:
-      TOKEN: 1109952551:AAFrUO_atoA1mxz9tXYswxukkLwxxQyzCWc
